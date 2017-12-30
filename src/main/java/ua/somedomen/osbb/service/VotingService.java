@@ -5,8 +5,11 @@ import java.util.List;
 
 public interface VotingService{
 
-    void addVoting(Voting voting);
+    Voting save(Voting voting);
 
     List<Voting> findALL();
+
+    Voting findOne(int votingId);
+
 
 }

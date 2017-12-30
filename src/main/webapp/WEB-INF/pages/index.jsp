@@ -11,7 +11,10 @@
 </sec:authorize>
 <%@include file="index/index-status-USER.jsp" %>
 <%@include file="index/index-bigPicture-ALL.jsp" %>
-<%@include file="index/index-outputNews-ALL.jsp" %>
+
+<%@include file="index/outputVoting/index-outputVoting-USER.jsp" %>
+
+<%@include file="index/outputNews/index-outputNews-ALL.jsp" %>
 <%@include file="index/index-googleMap-ALL.jsp" %>
 
 <%@include file="tmp/footer.jsp" %>

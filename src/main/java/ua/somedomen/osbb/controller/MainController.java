@@ -12,12 +12,13 @@ import ua.somedomen.osbb.service.NewsService;
 import ua.somedomen.osbb.service.StatusService;
 import ua.somedomen.osbb.service.VotingService;
 
+import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.List;
 
 
 @Controller
-public class MainController{
+public class MainController {
 
     @Autowired
     private VotingService votingService;
@@ -33,8 +34,8 @@ public class MainController{
     public String addNews(
             @RequestParam String newsName,
             @RequestParam String newsShort,
-            @RequestParam String newsText){
-        newsService.addNews(new News(newsName, newsShort, newsText,
+            @RequestParam String newsText) {
+        newsService.save(new News(newsName, newsShort, newsText,
                 /*Добавляю час створення новини*/String.valueOf(new Date())));
 
         return "redirect:/";
@@ -43,13 +44,36 @@ public class MainController{
 
     @PostMapping("/addVoting")
     public String addVoting(
-            @RequestParam("votingName") String votingName,
-            @RequestParam("votingText") String votingText){
+            @RequestParam String votingName,
+            @RequestParam String votingShort,
+            @RequestParam String votingText) {
         System.out.println(votingName);
+        System.out.println(votingShort);
         System.out.println(votingText);
-        votingService.addVoting(new Voting(votingName, votingText));
+
+        votingService.save(new Voting(votingName, votingShort, votingText, String.valueOf(new Date()),0, 0));
 
         return "redirect:/";
+    }
+
+    @PostMapping("/addUserVote")
+    public String addUserVote(
+            @RequestParam int id,
+            @RequestParam String userVote) {
+//        Voting vote = votingService.findOne(id);
+
+//        Boolean votez = Boolean.valueOf(userVote);
+//
+//        if (votez) {
+//            vote.setVotingTrue(vote.getVotingTrue() + 1);
+//        }
+//
+//        if (!votez) {
+//            vote.setVotingFalse(vote.getVotingFalse() + 1);
+//        }
+
+
+        return "redirect/";
     }
 
     @PostMapping("/addComment")
@@ -57,21 +81,21 @@ public class MainController{
             @RequestParam int id,
             @RequestParam String commentValue
 //            @RequestParam String userName
-    ){
+    ) {
 // Параметри авторизованого користувача, без Principal не вивести.
 
         News thisis = newsService.findOne(id);
 
-            //Не зважайте на червоні методи, LomBok працює, все гаразд :)
-            List<Comments> commentsList = thisis.getNewsComment();
-            commentsList.add(new Comments(commentValue, String.valueOf(new Date()), thisis));
+        //Не зважайте на червоні методи, LomBok працює, все гаразд :)
+        List<Comments> commentsList = thisis.getNewsComment();
+        commentsList.add(new Comments(commentValue, String.valueOf(new Date()), thisis));
 
-            thisis.setNewsName(thisis.getNewsName());
-            thisis.setNewsText(thisis.getNewsText());
-            thisis.setNewsComment(commentsList);
+        thisis.setNewsName(thisis.getNewsName());
+        thisis.setNewsText(thisis.getNewsText());
+        thisis.setNewsComment(commentsList);
         newsService.save(thisis);
 
-         return "redirect:/";
+        return "redirect:/";
     }
 
     //Мапінг для статуса
@@ -79,9 +103,9 @@ public class MainController{
     public String addStatus(
             //Приймає два поля інформації
             @RequestParam String statusName,
-            @RequestParam String statusText){
+            @RequestParam String statusText) {
 
-                //Зберегти(Створити) новий статус за допомогою наслідуваного метода з сервісРівня
+        //Зберегти(Створити) новий статус за допомогою наслідуваного метода з сервісРівня
         statusService.save(new Status(String.valueOf(new Date()), statusName, statusText));
 
         return "redirect:/";

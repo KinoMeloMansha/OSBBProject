@@ -23,7 +23,7 @@
 
 
                 <sec:authorize access="hasAnyRole('ADMIN')">
-                    <%@include file="editingNews/editingNews.jsp" %>
+                    <%@include file="../editingNews/editingNews.jsp" %>
                 </sec:authorize>
 
 
@@ -35,7 +35,7 @@
                     <p>Текст новини: ${News.newsShort}</p>
                     <p>Текст новини: ${News.newsText}</p>
 
-                    <%@include file="outputNews/outputNewsComment.jsp" %>
+                    <%@include file="outputNewsComment.jsp" %>
 
                 </div>
 

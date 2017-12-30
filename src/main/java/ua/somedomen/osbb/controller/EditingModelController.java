@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.somedomen.osbb.entity.News;
+import ua.somedomen.osbb.entity.Voting;
 import ua.somedomen.osbb.entity.securityEntity.User;
 import ua.somedomen.osbb.service.NewsService;
 import ua.somedomen.osbb.service.UserService;
@@ -14,23 +15,17 @@ import ua.somedomen.osbb.service.VotingService;
 @Controller
 public class EditingModelController {
 
-    //В кабінеті має виводити інфорамцію. Зараз там стоять інпути з
-    // можливістю редагування, але воно не працює толком. Хочу щоб
-    // Сергій це глянув і точно пояснив, що за чим іде. Тереоично
-    // ми не можемо увійти під Юзером. І через це нічого не виходить.
-
     @Autowired
-    private VotingService votingService;
+    private UserService userService;
 
     @Autowired
     private NewsService newsService;
 
     @Autowired
-    private UserService userService;
-
+    private VotingService votingService;
 
     @PostMapping("/newsUpdate")
-    public String testUpdate(
+    public String newsUpdate(
             @RequestParam int id,
             @RequestParam String newsName,
             @RequestParam String newsShort,
@@ -43,6 +38,24 @@ public class EditingModelController {
         thisis.setNewsText(newsShort);
         thisis.setNewsText(newsText);
         newsService.save(thisis);
+
+        return "redirect:/";
+    }
+
+    @PostMapping("/votingUpdate")
+    public String votingUpdate(
+            @RequestParam int id,
+            @RequestParam String votingName,
+            @RequestParam String votingShort,
+            @RequestParam String votingText) {
+
+        Voting thisis = votingService.findOne(id);
+
+        //Не зважайте на червоні методи, LomBok працює, все гаразд :)
+        thisis.setVotingName(votingName);
+        thisis.setVotingShort(votingShort);
+        thisis.setVotingText(votingText);
+        votingService.save(thisis);
 
         return "redirect:/";
     }
