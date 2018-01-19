@@ -34,7 +34,12 @@
             <li class="active"><a href="#">Кабінет</a></li>    
             <li><a href="#">Голосування</a></li>
             <li><a href="#">Документи</a></li>
-            <li>
+            <li id="log-in">
+                <a href="#">Вхід
+                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li id="log-out">
                 <a href="#">Вихід
                     <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                 </a>
@@ -77,37 +82,43 @@
                     <div class="news-slider-item " id="news-slider-item-1">
                         <div class="news-slider-container">
                             <div class="news-slider-content">
-                                <h3><a href="#news-date" class="gold">15.01.2018</a></h3>
-                                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
+                               <div class="news-slider-header">
+                                   <h3><a href="#news-date" class="gold">15.01.2018</a></h3>
+                                    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+                               </div>
+                                <div class="news-slider-section">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.</p>
-                                <div class="news-meta">
-                                    <div class="news-meta-content">
-                                        <span class="news-author-date">
-                                            <a href="https://vk.com/reveta_ua">
-                                                <img src="sourses/img/punkiv.jpg" alt="Punkiv">
-                                            </a>
-                                            <span>
-                                                <a href="#news-author" class="news-author">Punkiv,</a>
+                                </div>
+                                <div class="news-slider-footer">
+                                    <div class="news-meta">
+                                        <div class="news-meta-content">
+                                            <span class="news-author-date">
+                                                <a href="https://vk.com/reveta_ua">
+                                                    <img src="sourses/img/punkiv.jpg" alt="Punkiv">
+                                                </a>
+                                                <span>
+                                                    <a href="#news-author" class="news-author">Punkiv,</a>
+                                                </span>
+                                                <a href="#news-date" class="news-date">11 minute ago</a>
                                             </span>
-                                            <a href="#news-date" class="news-date">11 minute ago</a>
-                                        </span>
-                                        <a href="#news-coments" class="news-coments">
-                                            <span class="glyphicon glyphicon-comment"></span> 1
-                                        </a>
-                                        <span class="news-readtime">
-                                            <span class="glyphicon glyphicon-time"></span>1 min<span>read</span>
-                                        </span>
-                                        <span class="news-views">
-                                            <span class="glyphicon glyphicon-eye-open"></span>2395
-                                        </span>
-                                        <span></span>
+                                            <a href="#news-coments" class="news-coments">
+                                                <span class="glyphicon glyphicon-comment"></span> 1
+                                            </a>
+                                            <span class="news-readtime">
+                                                <span class="glyphicon glyphicon-time"></span>1 min<span>read</span>
+                                            </span>
+                                            <span class="news-views">
+                                                <span class="glyphicon glyphicon-eye-open"></span>2395
+                                            </span>
+                                            <span></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
