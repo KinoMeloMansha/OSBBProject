@@ -18,30 +18,11 @@ function getTopDate() {
     );
 }
 
-
-// Header dropdown animation
-function vissibleCategory() {
-    "use strict";
-    
-    var oH = 0, hH = 52, speed = 1000;
-    
-    function fadeOutDownAnimate() {
-        $('#categories').stop().animate({'max-height': oH, 'owerflow': 'hidden'}, speed);
-    }
-    
-    function fadeInDownAnimate() {
-        $('#categories').stop().animate({'max-height': hH, 'owerflow': 'vissible'}, speed);
-    }
-    
-    $('#vissible-category, #categories').hover(fadeInDownAnimate, fadeOutDownAnimate);
-}
-
 // Document ready function
 $(document).ready(function () {
     "use strict";
     
     getTopDate();
-    vissibleCategory();
     $('.carousel').carousel({
     interval: 3000,
     pause: "true"
