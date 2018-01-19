@@ -162,19 +162,55 @@ a.gold:hover, a.gold:focus, a.gold:visited{
     height: calc(100% - 52px);
 }
 
-/* ===== NEWS SLIDER ===== */
+/* ===== NEWS  ===== */
+
 .news{
     height: 80%;
-    padding: 20px 0;
+    padding-bottom: 20px;
 }
 
 .container-news{
     height: 100%;
 }
 
-.news-slider{
+/* ===== NEWS STATUS ===== */
+
+.news-status-container{
+    width: 100%;
+    height: 10%;
+}
+
+.nav-status{
     width: 100%;
     height: 100%;
+    background-color: #fff;
+}
+
+.navbar-status{
+    margin-right: 15px;
+}
+
+.navbar-status li a{
+    color: #333;
+    position: relative;
+}
+
+.navbar-status li a:hover,
+.navbar-status li a:focus{
+    color: #999;
+    background-color: #fff;
+}
+
+.navbar-status li a .glyphicon{
+    color: #d79c6a;
+    margin-left: 0;
+}
+
+
+/* ===== NEWS SLIDER ===== */
+.news-slider{
+    width: 100%;
+    height: 90%;
     position: relative
 }
 
@@ -433,12 +469,12 @@ a.gold:hover, a.gold:focus, a.gold:visited{
     opacity: 1;
 }
 
-/* ===== CARIUSE NEWS ARCHIVE ===== */
+/* ===== CARUSEL NEWS ARCHIVE ===== */
 
 .item{
 /*    padding: 0 6%;*/
     width: 100%;
-    height: 100%;
+/*    height: 100%;*/
 }
 
 .archive-news-item{
