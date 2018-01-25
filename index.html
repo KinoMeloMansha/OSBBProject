@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="sourses/css/style.css">
 </head>
 <body>
+<!-- ===== Header ===== -->
 <header id="header" class="header">
     <nav class="navbar navbar-dark">
       <div class="container">
@@ -51,30 +52,52 @@
     </nav>
 </header>
 
+<!-- ===== Main Page ===== -->
 <section id="main-page" class="main-page">
-    <div id="news" class="news">
-        <div class="container container-news">
-            <div class="news-status-container">
-                <div id="status" class="nav-status">
-                    <ul class="nav navbar-nav navbar-left navbar-status">
-                        <li class="active">
-                            <a href="#status">Status 1
-                                <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#status">Status 2
-                                <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#status">Status 3
-                                <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
-                            </a>
-                        </li>
-                    </ul>
+   
+   <!-- ===== Statuses ===== -->
+    <div id="status-container" class="status-container">
+       <div class="container">
+           <div id="status" class="nav-status">
+                <ul class="nav navbar-nav navbar-left navbar-status">
+                    <li id="status-1">
+                       <span class="status">Status1...
+                            <button class="get-more-info-about-status"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span></button>
+                            <button class="delete-status"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        </span>
+                        <!-- ===== More Info About Status ===== -->
+                    </li>
+                    <li id="status-2">
+                       <span class="status">Status2...
+                            <button class="get-more-info-about-status"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span></button>
+                            <button class="delete-status"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        </span>
+                        <!-- ===== More Info About Status ===== -->
+                    </li>
+                    <li id="status-3">
+                       <span class="status">Status3...
+                            <button class="get-more-info-about-status"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span></button>
+                            <button class="delete-status"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        </span>
+                        <!-- ===== More Info About Status ===== -->
+                    </li>
+                </ul>
+                
+                
+                
+                <!-- ===== Delete Status Verefication ===== -->
+                <div class="delete-status-verification">
+                    <h5>Ви дійсно хочете видалити статус?</h5>
+                    <input type="submit" id="delete" class="btn btn-delete" value="Так">
+                    <input type="submit" id="cancel" class="btn btn-cancel" value="Ні">
                 </div>
             </div>
+       </div>
+    </div>
+            
+    <!-- ===== News ===== -->
+    <div id="news" class="news">
+        <div class="container container-news">
             
             <!-- News Slider -->
             <div id="news-slider" class="news-slider">

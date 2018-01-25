@@ -48,10 +48,57 @@ function carouselStart() {
     });
 }
 
+function deleteStatus() {
+    "use strict";
+    
+    $('.more-info-about-status').remove();
+    $(".delete-status-verification").fadeIn();
+        
+    function closeStatusDeleteVerification() {
+        $('.delete-status-verification').fadeOut();
+    }
+        
+    $('#delete').on('click', closeStatusDeleteVerification);
+    $('#cancel').on('click', closeStatusDeleteVerification);
+}
+
+function getStatusInfo() {
+    "use strict";
+    //function for getting data from database
+}
+
+function GetStatusMore() {
+    "use strict";
+    
+    getStatusInfo();
+    
+    $('.more-info-about-status').remove();
+    
+    $(this).parent('.status').parent('li').append(
+        '<div class="more-info-about-status">' + '<span class="close-info">' +
+                '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>' +
+            '</span>' +
+            '<ul>' + '<li><span>Адрес:</span> буд. 2, кв. 15</li>' +
+                '<li><span>Дата: </span>21.01.2018</li>' +
+                '<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt iste corporis autem debitis dolorum officiis tenetur officia ipsa recusandae ipsam assumenda alias nam esse nisi, eius vero soluta aliquid voluptas.</p></li>' +
+                '<!-- <li><input type="submit" class="btn btn-delete" value="Видалити"></li>-->' +
+            '</ul>' + '</div>'
+    );
+        
+    $('.delete-status-verification').fadeOut();
+        
+    $(".close-info").on("click", function () {
+        $(this).parent(".more-info-about-status").remove();
+    });
+}
+
 // Document ready function
-$(document).ready(function () {
+$('document').ready(function () {
     "use strict";
     
     getTopDate();
     carouselStart();
+    
+    $(".get-more-info-about-status").on("click", GetStatusMore);
+    $(".delete-status").on("click", deleteStatus);
 });
