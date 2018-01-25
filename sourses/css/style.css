@@ -19,6 +19,16 @@ h1{
     line-height: .9;
 }
 
+h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12pt;
+    color: #fff;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: normal;
+}
+
 h3{
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
@@ -387,6 +397,12 @@ a:hover, a:focus, a:visited{
     position: relative;
     bottom: 0;
     margin-bottom: 10px;
+}
+
+.news-slider-section hr{
+    width: 15%;
+    margin: 0 0 10px 0;
+    border-top: 2px solid #d79c6a;
 }
 
 .news-slider-footer{
