@@ -317,6 +317,11 @@ a:hover, a:focus, a:visited{
     color: #d79c6a;
 }
 
+.btn-send{
+    background-color: #d79c6a;
+    color: #fff;
+}
+
 /* ===== NEWS  ===== */
 
 .news{
@@ -381,6 +386,7 @@ a:hover, a:focus, a:visited{
     width: 100%;
     height: 100%;
     padding: 0 45px 45px 45px;
+    position: relative;
 }
 
 .news-slider-header{
@@ -403,6 +409,99 @@ a:hover, a:focus, a:visited{
     width: 15%;
     margin: 0 0 10px 0;
     border-top: 2px solid #d79c6a;
+}
+
+/* ===== Reviews ===== */
+
+.news-slider-reviews{
+    width: 92%;
+    height: 82%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+/*    background-color: rgba(225, 225, 225, .5);*/
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    display: none;
+    overflow-y: scroll;
+}
+
+.review{
+    width: 100%;
+    height: auto;
+    border-top: 1px solid rgba(225, 225, 225, .5);
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.review:first-child{
+    border-color: rgba(225, 225, 225, 0);
+    padding-top: 5px;
+}
+
+.review-photo{
+    width: 5%;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.review-photo img{
+    filter: grayscale(100%);
+    transition: .3s all ease-in-out;
+    display: inline-block;
+    border-radius: 5px;
+    max-width: 100%;
+    min-height: 1px;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.review-name-date{
+    width: calc(95% - 20px);
+    float: left;
+    line-height: 28px;
+    color: #fff;
+    font-size: 8pt;
+}
+
+.review-name{
+    color: #fff;
+    font-size: 10pt;
+    transition: all .3s ease-in-out;
+}
+
+.review-date{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 2px 2px rgba(0,0,0,.5);
+}
+
+.review-text{
+    width: 100%;
+    clear: both;
+    color: #fff;
+}
+
+.review-form{
+    
+}
+
+.review-form label{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 2px 2px rgba(0,0,0,.5);
+    color: #fff;
+}
+
+.review-form textarea{
+    margin-bottom: 10px;
 }
 
 .news-slider-footer{
@@ -498,6 +597,10 @@ a:hover, a:focus, a:visited{
 
 .news-coments span{
     margin-right: 2px;
+}
+
+.close-reviews{
+    display: none;
 }
 
 .news-readtime{
@@ -698,24 +801,29 @@ a:hover, a:focus, a:visited{
 }
 
 /* ===== SCROLLBAR STYLES +++++ */
-.news-slider-section::-webkit-scrollbar {
+.news-slider-section::-webkit-scrollbar,
+.news-slider-reviews::-webkit-scrollbar{
 	  width: 5px;
 }
 
-.news-slider-section::-webkit-scrollbar-button { 
+.news-slider-section::-webkit-scrollbar-button,
+.news-slider-reviews::-webkit-scrollbar-button{ 
 /*    background-color: rgba(3, 3, 3, 0);*/
 }
 
-.news-slider-section::-webkit-scrollbar-track {
+.news-slider-section::-webkit-scrollbar-track,
+.news-slider-reviews::-webkit-scrollbar-track{
     background-color: rgba(3, 3, 3, .2);
 }
 
-.news-slider-section::-webkit-scrollbar-thumb {
+.news-slider-section::-webkit-scrollbar-thumb,
+.news-slider-reviews::-webkit-scrollbar-thumb{
     border-radius: 10px;
     background-color: rgba(225, 225, 225, 0.6);
 }
 
-.news-slider-section::-webkit-scrollbar-corner {
+.news-slider-section::-webkit-scrollbar-corner,
+.news-slider-reviews::-webkit-scrollbar-corner{
     background-color: black;
 }
  

@@ -105,14 +105,16 @@
                     <div class="news-slider-item " id="news-slider-item-1">
                         <div class="news-slider-container">
                             <div class="news-slider-content">
+                              <!-- Slider News Title -->
                                <div class="news-slider-header">
                                    <h3><a href="#news-date" class="gold">15.01.2018</a></h3>
                                     <h1>Lorem ipsum dolor sit amet.</h1>
                                </div>
+                               <!-- Slider News text -->
                                 <div class="news-slider-section">
                                     <h2 class="news-short-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis assumenda fugiat aperiam odit dolorem unde illo neque dicta numquam deserunt.</h2>
                                     <hr>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
+                                    <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
@@ -121,6 +123,55 @@
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore officiis, vero molestiae quae at accusamus quia ullam porro quam, aperiam placeat reiciendis. Sed in doloremque vel ipsum, velit labore odio.</p>
                                 </div>
+                                <!-- Slider News Reviews -->
+                                <div class="news-slider-reviews">
+                                    <div id="review-1" class="review">
+                                        <div class="review-photo">
+                                            <img src="sourses/img/punkiv.jpg" alt="review-img">
+                                        </div>
+                                        <div class="review-name-date">
+                                            <span class="review-name"><a href="#user">Romasia Punkiv</a></span>, 
+                                            <span class="review-date gold">26.01.2018</span>
+                                        </div>
+                                        <div class="review-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odit officia libero inventore labore non nam perferendis alias! Sed ex mollitia nostrum officia accusantium quos error voluptatibus aliquid omnis ad.
+                                        </div>
+                                    </div>
+                                    <div id="review-2" class="review">
+                                        <div class="review-photo">
+                                            <img src="sourses/img/punkiv.jpg" alt="review-img">
+                                        </div>
+                                        <div class="review-name-date">
+                                            <span class="review-name"><a href="#user">Romasia Punkiv</a></span>, 
+                                            <span class="review-date gold">26.01.2018</span>
+                                        </div>
+                                        <div class="review-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odit officia libero inventore labore non nam perferendis alias! Sed ex mollitia nostrum officia accusantium quos error voluptatibus aliquid omnis ad.
+                                        </div>
+                                    </div>
+                                    <div id="review-3" class="review">
+                                        <div class="review-photo">
+                                            <img src="sourses/img/punkiv.jpg" alt="review-img">
+                                        </div>
+                                        <div class="review-name-date">
+                                            <span class="review-name"><a href="#user">Romasia Punkiv</a></span>, 
+                                            <span class="review-date gold">26.01.2018</span>
+                                        </div>
+                                        <div class="review-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odit officia libero inventore labore non nam perferendis alias! Sed ex mollitia nostrum officia accusantium quos error voluptatibus aliquid omnis ad.
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Form for send review -->
+                                    <div class="review-form">
+                                        <form action="goto">
+                                            <label for="textarea">Write comment:</label>
+                                            <textarea class="form-control" rows="3" id="textarea"></textarea>
+                                            <input class="btn btn-send" type="submit" value="Send">
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- Slidet News Footer -->
                                 <div class="news-slider-footer">
                                     <div class="news-meta">
                                         <div class="news-meta-content">
@@ -133,8 +184,11 @@
                                                 </span>
                                                 <a href="#news-date" class="news-date">11 minute ago</a>
                                             </span>
-                                            <a href="#news-coments" class="news-coments">
+                                            <a href="#news-coments" class="news-coments" id="openReviews">
                                                 <span class="glyphicon glyphicon-comment"></span> 1
+                                            </a>
+                                            <a href="#news-coments" class="news-coments close-reviews" id="closeReviews">
+                                                <span class="glyphicon glyphicon-bell"></span> Back to news
                                             </a>
                                             <span class="news-readtime">
                                                 <span class="glyphicon glyphicon-time"></span>1 min<span>read</span>

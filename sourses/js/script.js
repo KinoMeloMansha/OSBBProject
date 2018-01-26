@@ -92,6 +92,24 @@ function GetStatusMore() {
     });
 }
 
+function closeReview() {
+    "use strict";
+    
+    $("#closeReviews").hide();
+    $("#openReviews").show();
+    $(".news-slider-section, .news-slider-header").css({"opacity": "1"});
+    $(".news-slider-reviews").css({"display": "none"});
+}
+
+function openReview() {
+    "use strict";
+    
+    $("#openReviews").hide();
+    $("#closeReviews").show();
+    $(".news-slider-section, .news-slider-header").css({"opacity": "0"});
+    $(".news-slider-reviews").css({"display": "block"});
+}
+
 // Document ready function
 $('document').ready(function () {
     "use strict";
@@ -101,4 +119,6 @@ $('document').ready(function () {
     
     $(".get-more-info-about-status").on("click", GetStatusMore);
     $(".delete-status").on("click", deleteStatus);
+    $("#openReviews").on("click", openReview);
+    $("#closeReviews").on("click", closeReview);
 });
