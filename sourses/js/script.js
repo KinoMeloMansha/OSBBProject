@@ -116,6 +116,7 @@ $('document').ready(function () {
     
     getTopDate();
     carouselStart();
+//    createDiagram();
     
     $(".get-more-info-about-status").on("click", GetStatusMore);
     $(".delete-status").on("click", deleteStatus);
