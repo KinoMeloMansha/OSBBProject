@@ -182,6 +182,30 @@ a:hover, a:focus, a:visited{
     font-weight: bold;
 }
 
+button.navbar-toggle{
+    border-color: #fff;
+}
+
+button.navbar-toggle span{
+    background-color: #fff;
+}
+
+button.navbar-toggle:hover{
+    border-color: #999;
+}
+
+button.navbar-toggle:hover span{
+    background-color: #999;
+}
+
+button.navbar-toggle:focus{
+    border-color: #d68a46;
+}
+
+button.navbar-toggle:focus span{
+    background-color: #d68a46;
+}
+
 /* ===== SECTION ===== */
 .main-page{
     width: 100%;
@@ -742,6 +766,7 @@ a:hover, a:focus, a:visited{
     width: 200px;
     padding: 10px;
     margin-left: 10px;
+    margin-bottom: 10px;
     background-image: url(../img/news1.jpg);
     background-position: center center;
     border-radius: 10px;
@@ -794,14 +819,15 @@ a:hover, a:focus, a:visited{
     z-index: 10;
     top: calc(50% - 16px);
     text-decoration: underline;
+    margin-top: -5px;
 }
 
 .carousel-button-prev a{
-    right: 10px;
+    right: 50%;
 }
 
 .carousel-button-next a{
-    left: 10px;
+    left: 50%;
 }
 
 .carousel-button .glyphicon{

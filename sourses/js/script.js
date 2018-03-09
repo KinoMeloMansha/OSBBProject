@@ -9,13 +9,25 @@ function getTopDate() {
         return monthName[this.getMonth()];
     };
     
-    var topDate = new Date();
+    var topDate = new Date(),
+        code = '<span class="date-day">' + topDate.getDate() + '</span>' +
+               '<span class="date-meta">' + '<span class="date-month">' + topDate.getMonthName() + '</span>' + '<br>' +
+               '<span class="date-year">' + topDate.getFullYear() + '</span>' + '</span>';
+    $("#nav-date").empty().append(code);
     
-    $("#nav-date").append(
-        '<span class="date-day">' + topDate.getDate() + '</span>' + '<span class="date-meta">' +
-            '<span class="date-month">' + topDate.getMonthName() + '</span>' + '<br>' +
-            '<span class="date-year">' + topDate.getFullYear() + '</span>' + '</span>'
-    );
+    $(window).resize(function () {
+        var w = $(window).width();
+        
+        if (w <= 750) {
+            $("#nav-date").css("display", "none");
+            $(".navbar-header .nav-date").detach();
+            $(".navbar-header").prepend('<span class="nav-date">' + code + '</span>');
+        } else {
+            $(".navbar-header .nav-date").detach();
+            $("#nav-date").css("display", "block");
+            $("#nav-date").empty().append(code);
+        }
+    });
 }
 
 function carouselStart() {
