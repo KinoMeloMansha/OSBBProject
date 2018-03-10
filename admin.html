@@ -28,10 +28,120 @@
       <div class="tab-content">
        <div role="tabpanel" class="tab-pane active" id="main">Головна</div>
         <div role="tabpanel" class="tab-pane" id="voting">
-            Голосування
+            <div class="add-new-voiting-container">
+               <h3>Add new voiting</h3>
+                <form class="form-horizontal" action="">
+                    <div class="form-group">
+                        <label for="inputVoitingName">Name</label>
+                        <input type="text" class="form-control" id="inputVoitingName" placeholder="Lorem Ipsum">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputVoitingShortText">Short Text</label>
+                        <input type="text" class="form-control" id="inputVoitingShortText" placeholder="Lorem ipsum dolore sit amet.">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputVoitingFullText">Full Text</label>
+                        <textarea class="form-control" id="inputVoitingFullText" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></textarea>
+                    </div>
+                    <button type="submit" id="addNewVoiting" class="btn btn-default btn-admin">Add</button>
+                </form>
+            </div>
+            <div class="all-voiting">
+               <h3>All voiting</h3>
+                <table class="table table-bordered table-hover">
+                  <thead>
+                      <tr class="dark">
+                          <th>Id</th>
+                          <th>Name</th>
+                          <th>Short Text</th>
+                          <th>Full Text</th>
+                          <th>True</th>
+                          <th>False</th>
+                          <th>Active</th>
+                          <th>Edit</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Lorem Ipsum</td>
+                          <td>Lorem ipsum dolore sit amet.</td>
+                          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor autem quis sunt, totam. Aspernatur itaque nulla quasi earum non distinctio commodi alias asperiores. Illum consectetur laborum facere iste incidunt voluptatum!</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>
+                              <button type="submit" id="deactivateVoiting" class="btn btn-default">Deactivate</button>
+                          </td>
+                          <td>
+                              <button type="submit" id="editVoiting" class="btn btn-default">Edit</button>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="news">
-            Новини
+            <div class="add-new-news-container">
+               <h3>Add new news</h3>
+                <form class="form-horizontal" action="">
+                    <div class="form-group">
+                        <label for="inputNewsName">Name</label>
+                        <input type="text" class="form-control" id="inputNewsName" placeholder="Lorem Ipsum">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNewsTime">Date and Time</label>
+                        <input type="datetime-local" class="form-control" id="inputNewsTime" pattern="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNewsAuthor">Author</label>
+                        <input type="text" class="form-control" id="inputNewsAuthor" placeholder="Roman Punkiv">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNewsShortText">Short Text</label>
+                        <input type="text" class="form-control" id="inputNewsShortText" placeholder="Lorem ipsum dolore sit amet.">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNewsFullText">Full Text</label>
+                        <textarea class="form-control" id="inputNewsFullText" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNewsImg">News Image</label>
+                        <input type="file" id="inputNewsImg">
+                    </div>
+                    <button type="submit" id="addNewNews" class="btn btn-default btn-admin">Add</button>
+                </form>
+            </div>
+            <div class="all-news">
+               <h3>All news</h3>
+                <table class="table table-bordered table-hover">
+                  <thead>
+                      <tr class="dark">
+                          <th>Id</th>
+                          <th>Name</th>
+                          <th>Date and Time</th>
+                          <th>Author</th>
+                          <th>Short Text</th>
+                          <th>Full Text</th>
+                          <th>Image</th>
+                          <th>Edit</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Lorem Ipsum</td>
+                          <td>Thu Mar 08 16:14:21 EET 2018</td>
+                          <td>User Userov</td>
+                          <td>Lorem ipsum dolore sit amet.</td>
+                          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor autem quis sunt, totam. Aspernatur itaque nulla quasi earum non distinctio commodi alias asperiores. Illum consectetur laborum facere iste incidunt voluptatum!</td>
+                          <td>imege.jpg</td>
+                          <td>
+                              <button type="submit" id="editNews" class="btn btn-default">Edit</button>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="statuses">
             Статуси

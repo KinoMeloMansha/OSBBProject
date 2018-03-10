@@ -2,6 +2,11 @@ body{
     
 }
 
+h3{
+    text-align: center;
+    font-weight: bold;
+}
+
 .sign-in-admin-container{
     width: 100%;
     height: 100%;
@@ -42,7 +47,7 @@ body{
 }
 
 .admin-panel-container{
-    background-color: #bdbdbd;
+
 }
 .admin-panel-container ul{
     background-color: #333;
@@ -63,6 +68,33 @@ body{
     font-weight: bold;
 }
 
-.tab-content .tab-pane{
-    padding: 20px;
+.add-new-voiting-container,
+.add-new-news-container{
+    background-color: #bdbdbd;
+    padding: 20px 40px;
+}
+
+.all-voiting,
+.all-news{
+    padding: 20px 40px;
+}
+
+.btn-admin{
+    width: 10%;
+    display: block;
+    margin: auto;
+}
+
+.table tr.dark{
+    color: #fff;
+    background-color: #333;
+}
+
+.table thead tr th{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table tbody tr td{
+    vertical-align: middle;
 }
