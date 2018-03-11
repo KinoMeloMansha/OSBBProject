@@ -1,13 +1,15 @@
+var test = 1;
+
 var google, document;
-google.charts.load('current', {'packages': ['corechart']});
+google.charts.load('current', {callback: function () {drawChart(test);}, packages: ['corechart']});
 
 // Set a callback to run when the Google Visualization API is loaded.
-google.charts.setOnLoadCallback(drawChart);
+//google.charts.setOnLoadCallback(drawChart);
 
 // Callback that creates and populates a data table,
 // instantiates the pie chart, passes in the data and
 // draws it.
-function drawChart(a) {
+function drawChart(status) {
     // Create the data table.
     "use strict";
     
@@ -28,14 +30,15 @@ function drawChart(a) {
     };
 
     // Instantiate and draw our chart, passing in some options.
-//    var a = 3;
+    var a = status;
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
     
     var addTitle = function () {$('.chart_div').prepend('<h6>' + 'Hello World?' + '</h6>'); };
     var addButtons = function () {$('.chart_div').append(
         '<div class="chart-buttons">' +
         '<button class="btn btn-chart btn-chart-yes" type="button"> Yes </button>' +
-        '<button class="btn btn-chart btn-chart-no" type="button"> No </button>'+ '</div>'
+        '<button class="btn btn-chart btn-chart-no" type="button"> No </button>' + '</div>'
     ); };
     
     if (a === 1) {
@@ -52,7 +55,8 @@ function drawChart(a) {
     }
 }
 
-$(document).on('click', function(){
-    var b = Number(prompt("Enter status number:"));
-    drawChart(b);
-});
+//$(document).on('click', function(){
+//    var b = Number(prompt("Enter status number:"));
+//    drawChart(2);
+//});
+
