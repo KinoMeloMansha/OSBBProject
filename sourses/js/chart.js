@@ -1,4 +1,4 @@
-var test = 1;
+//var test = 1;
 
 var google, document;
 google.charts.load('current', {callback: function () {drawChart(test);}, packages: ['corechart']});
