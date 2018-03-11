@@ -687,6 +687,20 @@ button.navbar-toggle:focus span{
 .news-mini-item{
     min-height: 70px;
     display: table-row;
+    transition: all 0.3s ease;
+}
+
+.news-mini-item:hover{
+    cursor: pointer;
+    background-color: rgba(3, 3, 3, .5);
+}
+
+.news-mini-item:hover .news-mini-date{
+    color: #fff;
+    opacity: 1;
+}
+.news-mini-item:hover h4.news-mini-title span{
+    color: #999;
 }
 
 .news-mini-item > div{
@@ -732,14 +746,6 @@ button.navbar-toggle:focus span{
     font-size: 10px;
 }
 
-.news-mini-date:hover,
-.news-mini-date:focus,
-.news-mini-date:visited,
-.news-mini-title:hover .news-readmini-later{
-    color: #fff;
-    opacity: 1;
-}
-
 /* ===== CARUSEL NEWS ARCHIVE ===== */
 
 .archive-news{
@@ -771,6 +777,24 @@ button.navbar-toggle:focus span{
     background-position: center center;
     border-radius: 10px;
     position: relative;
+    transition: all 0.3s ease;
+}
+
+.carousel-item:hover{
+    cursor: pointer;
+}
+
+.carousel-item p:last-child span{
+    transition: all 0.3s ease;
+}
+
+.carousel-item:hover p:last-child span{
+    color: #999;
+}
+
+.carousel-item:hover .archive-news-date{
+    color: #fff;
+    opacity: 1;
 }
 
 .carousel-item::after{

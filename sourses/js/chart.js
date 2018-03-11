@@ -31,12 +31,12 @@ function drawChart() {
     var a = 3;
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     
-    var addTitle = function () {$('.chart_div').prepend('<h6>' + 'Hello World?' + '</h6>')};
+    var addTitle = function () {$('.chart_div').prepend('<h6>' + 'Hello World?' + '</h6>'); };
     var addButtons = function () {$('.chart_div').append(
-        '<div class="chart-buttons">' + 
+        '<div class="chart-buttons">' +
         '<button class="btn btn-chart btn-chart-yes" type="button"> Yes </button>' +
         '<button class="btn btn-chart btn-chart-no" type="button"> No </button>'+ '</div>'
-    )};
+    ); };
     
     if (a === 1) {
         $(".bg-grey").css({"display": "block"});

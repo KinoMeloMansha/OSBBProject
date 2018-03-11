@@ -122,16 +122,27 @@ function openReview() {
     $(".news-slider-reviews").css({"display": "block"});
 }
 
+function workWithNews() {
+    "use strict";
+    var newsId = $(this).attr("id"); // отримати айдішку елемента, по якому був клік
+    
+    var newsIdNumber = Number(newsId.replace(/\D+/g, "")); // взяти з айдішки число і перетворити його в тип Number
+    console.log(newsIdNumber);
+}
+
 // Document ready function
 $('document').ready(function () {
     "use strict";
     
     getTopDate();
     carouselStart();
-//    createDiagram();
+    // createDiagram();
     
     $(".get-more-info-about-status").on("click", GetStatusMore);
     $(".delete-status").on("click", deleteStatus);
     $("#openReviews").on("click", openReview);
     $("#closeReviews").on("click", closeReview);
+    
+    // News
+    $(".news-item").on("click", workWithNews);
 });
