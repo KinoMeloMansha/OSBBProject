@@ -7,7 +7,7 @@ google.charts.setOnLoadCallback(drawChart);
 // Callback that creates and populates a data table,
 // instantiates the pie chart, passes in the data and
 // draws it.
-function drawChart() {
+function drawChart(a) {
     // Create the data table.
     "use strict";
     
@@ -28,7 +28,7 @@ function drawChart() {
     };
 
     // Instantiate and draw our chart, passing in some options.
-    var a = 3;
+//    var a = 3;
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     
     var addTitle = function () {$('.chart_div').prepend('<h6>' + 'Hello World?' + '</h6>'); };
@@ -51,3 +51,8 @@ function drawChart() {
         $(".bg-grey").css({"display": "none"});
     }
 }
+
+$(document).on('click', function(){
+    var b = Number(prompt("Enter status number:"));
+    drawChart(b);
+});
