@@ -89,10 +89,6 @@
                         <input type="text" class="form-control" id="inputNewsName" placeholder="Lorem Ipsum">
                     </div>
                     <div class="form-group">
-                        <label for="inputNewsTime">Date and Time</label>
-                        <input type="datetime-local" class="form-control" id="inputNewsTime" pattern="">
-                    </div>
-                    <div class="form-group">
                         <label for="inputNewsAuthor">Author</label>
                         <input type="text" class="form-control" id="inputNewsAuthor" placeholder="Roman Punkiv">
                     </div>
@@ -144,7 +140,50 @@
             </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="statuses">
-            Статуси
+            <div class="add-new-status-container">
+               <h3>Add new status</h3>
+                <form class="form-horizontal" action="">
+                    <div class="form-group">
+                        <label for="inputStatusApartments">Apartments</label>
+                        <input type="text" class="form-control" id="inputStatusApartments" placeholder="Lorem Ipsum">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputStatusDescription">Description</label>
+                        <input type="text" class="form-control" id="inputStatusDescription" placeholder="Lorem ipsum dolore sit amet.">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputStatusMessage">Message</label>
+                        <textarea class="form-control" id="inputStatusMessage" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></textarea>
+                    </div>
+                    <button type="submit" id="addNewStatus" class="btn btn-default btn-admin">Add</button>
+                </form>
+            </div>
+            <div class="all-status">
+               <h3>All voiting</h3>
+                <table class="table table-bordered table-hover">
+                  <thead>
+                      <tr class="dark">
+                          <th>Id</th>
+                          <th>Apartments</th>
+                          <th>Description</th>
+                          <th>Message</th>
+                          <th>Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Lorem Ipsum</td>
+                          <td>Lorem ipsum dolore sit amet.</td>
+                          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor autem quis sunt, totam. Aspernatur itaque nulla quasi earum non distinctio commodi alias asperiores. Illum consectetur laborum facere iste incidunt voluptatum!</td>
+                          <td class="action">
+                              <button type="submit" id="deleteStatus" class="btn btn-default">Delete</button>
+                              <button type="submit" id="editStatus" class="btn btn-default">Edit</button>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="documents">
             Документи

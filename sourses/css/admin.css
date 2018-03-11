@@ -69,13 +69,15 @@ h3{
 }
 
 .add-new-voiting-container,
-.add-new-news-container{
+.add-new-news-container,
+.add-new-status-container{
     background-color: #bdbdbd;
     padding: 20px 40px;
 }
 
 .all-voiting,
-.all-news{
+.all-news,
+.all-status{
     padding: 20px 40px;
 }
 
@@ -97,4 +99,8 @@ h3{
 
 .table tbody tr td{
     vertical-align: middle;
+}
+
+.table tbody tr td.action{
+    text-align: center;
 }
