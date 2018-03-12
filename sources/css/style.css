@@ -401,9 +401,8 @@ button.navbar-toggle:focus span{
     background: linear-gradient(to bottom,rgba(50,50,50,0.2) 0,rgba(16,15,15,0.91) 89%,rgba(16,15,15,0.93) 93%) !important;
 }
 
-
-#news-slider-item-1{
-    background-image: url('../img/news1.jpg');
+#news-slider-item-2{
+    background-image: url('../img/news2.jpg');
 }
 
 .news-slider-container{

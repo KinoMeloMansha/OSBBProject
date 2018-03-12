@@ -124,10 +124,18 @@ function openReview() {
 
 function workWithNews() {
     "use strict";
-    var newsId = $(this).attr("id"); // отримати айдішку елемента, по якому був клік
     
-    var newsIdNumber = Number(newsId.replace(/\D+/g, "")); // взяти з айдішки число і перетворити його в тип Number
-    console.log(newsIdNumber);
+    // отримати айдішку елемента, по якому був клік та витягнути з нього id елемента і перетворити в Number
+    var newsIdNumber = Number($(this).attr("id").replace(/\D+/g, ""));
+    
+    var newsName = 'News Name', newsShort = 'News Short', newsText = 'News Text', newsTime = '12.03.2018', newsAuthor = 'News Author', newsImage = '../sources/img/news' + newsIdNumber + '.jpg';
+
+    $(".news-slider-item").css({"background-image": "url(" + newsImage + ")"}).removeAttr("id").attr("id", "news-slider-item-" + newsIdNumber);
+    $(".news-slider-content h3 span").empty().text(newsTime);
+    $(".news-slider-content h1").empty().text(newsName);
+    $(".news-slider-content h2").empty().text(newsShort);
+    $(".news-slider-content p").empty().text(newsText);
+    $(".news-slider-content a.news-author").empty().text(newsAuthor);
 }
 
 // Document ready function
